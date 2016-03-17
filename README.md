@@ -2,7 +2,7 @@
 An html/ajax template for the students of Fab Academy
 
 ## License
-MIT Turbo
+MIT Turbo Diesel
 
 ## Includes
 * <a href="http://getbootstrap.com/">Twitter Bootstrap</a>
