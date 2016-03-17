@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Name Surname">
+    <link rel="icon" href="media/favicon.ico">
+
+    <title>Fab Academy 2015 - Silvia Palazzi</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="media/fabacademy.css" rel="stylesheet">
+
+    <!-- 3D files viewer -->
+    <script type="text/javascript" src="media/jsc3d_ie.min.js"></script>
+	<script type="text/javascript" src="media/jsc3d.min.js"></script>
+    <script type="text/javascript" src="media/jsc3d.webgl.js"></script>
+    <script type="text/javascript" src="media/jsc3d.touch.js"></script>
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="bootstrap/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="bootstrap/js/ie-emulation-modes-warning.js"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Load the menu file -->
+    <script>
+	function menu() {
+					  $('#exercises').load("exercises-menu.html");
+					  $('#project').load("project-menu.html");
+					  $('#cclicense').load("license.html");
+					  }
+	</script>
+
+  </head>
+
+  <body onload="menu()">
+
+    <!-- Static navbar -->
+    <nav class="navbar navbar-default navbar-static-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="index.html"><b>Silvia Palazzi</b></a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="about.html">About Me</a></li>
+            <li><a href="finalproject.html">Final Project</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Exercises <span class="caret"></span></a>
+              <ul id="exercises" class="dropdown-menu" role="menu">
+              </ul>
+            </li>
+            <li class="dropdown">
+
+              <ul id="project" class="dropdown-menu" role="menu">
+              </ul>
+            </li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+    <div class="container">
+
+	<!-- Insert your content here below! -->
+
+
+     <h2><b>Starting steps: Discovering HTML world</b></h2>
+     <p style="color:darkgreen;">The assignement for the first week was to create a personal website and to
+      make a proposal for my final project.
+     This first week represented an opportunity to face with Informatics for the
+     first time in my life (since I had never studied IT before) and to start becoming
+    confident with the subject.
+     There is a list of useful links that used during this week:
+
+     </p>
+ <ul>
+ <li><a href="http://www.w3schools.com/html/html_intro.asp">w3schools.com</a></li>
+ <li>link2</li>
+ <li>link3</li>
+</ul>
+
+    <h3>Ubuntu 15.10</h3>
+	<p>
+	The first thing I was required to do to start this course clearly was to have
+   a notebook.I'm sure no one would judge it a reason to be worried about but
+    to me it represented the very first problem: recently I was using my brother's
+  pc, since mine showed clear signs of death desire. <br>I've never been a geek, but neither
+  I've been able to keep my notebook's safety at a decent level.
+  So, thanks to <a href="http://archive.fabacademy.org/archives/2016/fablabtoscana2016/students/111/index.html">
+    Matteo Sirizzotti</a>, a FabAcademy student of <a href="http://fablabtoscana.it/">
+      FabLab Toscana</a>
+      I resumed my 8-year old Asus F5Vseries, formatting it and installing
+      <i style="color:red">Ubuntu 15.10</i> operating system.
+      Then, I moved my first steps in using terminal commands and I installed
+      <i style="color:red">Atom</i> to start writing HTML codes.</p>
+
+    <h3>Atom & HTML coding </h3>
+	<p>
+I previously knew that approaching with the huge and unknown world of HTML wouldn't have
+been easy at all, but I found great help on <a href="http://www.w3schools.com/html/html_intro.asp">w3schools.com</a>
+This site helps in learning, testing, and training HTML code writing, by means of a long list of tutorials,
+divided by topics that also cointain areas dedicated to exercises. <br>The most efficient
+way of applying what I learned was to start from a prewritten html file and gradually change it, according to
+the commands I little by little discovered. <br>To do that, as I already said, I used <i style="color:red">Atom</i> :
+it is a approachable text editor that you can easily use without ever touching a config file.
+ Infact, it permits you to navigate easily among
+directories and files thanks to the menu in the left part of the page and it's
+ also possibile to work on several files at the same time, thanks to tabs.   </p>
+ <p>
+   The first command I learned to use was <b>" p "</b> that allows you to divide the page body into paragraphs.<br>
+   It represents the first success I had in HTML coding and that's why I feel fond of it.
+   That's how you must type it in the text editor:
+ </p>
+
+	<pre class="prettyprint linenums">
+	&ltp&gt;
+	Your text here
+	&lt/p&gt;</pre>
+	</p>
+	Result:
+	<p style="color:black";>
+	<b>Your text here</b>
+	</p>
+
+  <h3>Project Planning</h3>
+  <p>
+    As I said, at the beginning of the course I qas asked to put down some ideas about my final project.
+    I wanted to make something concerning my main interests that could be useful
+    at the same time, therefore I focused on nature and, particularly, on water need
+    of plant.<br>So, I put together the problem of water waste and the common habit of domestic
+    gardening and I aimed at inventing a system that everyone could easily have at home, so as
+    so to improve the water issue on a large scale, starting from single persons's little care.
+  </p>
+  <p>
+    Owing to my project ambition, I had to plan the steps that would have lead me to
+    my goal in a rational way and even if that would seem quite simple, I must admit
+    it's not like that, since I still don't know definitely the items I'll have to
+    create and how I'll do it. Therefore, having no ideas about time, procedures and
+    difficulties, I had to find a method to face the process of my project realization
+  </p>
+  <p>
+    I discovered that plans can be made by and follow paths that can be the opposite
+    one from another. After achieving a brief knowledge about the main ones and their
+    principles, I set up my work according to 
+  </p>
+    <!-- End of your content -->
+
+    </div> <!-- /container -->
+
+	<!-- footer -->
+
+    <footer id="footer">
+        <p id="cclicense">
+        </p>
+        <p class="license">
+        Theme: <a href="https://github.com/openp2pdesign/FabAcademy_Template">Fab Academy Template</a> by <a href="http://openp2pdesign.org">Massimo Menichinelli</a> <br>
+        Based on <a href="http://getbootstrap.com/">Twitter Bootstrap</a>+<a href="http://jquery.com/">JQuery</a>+<a href="https://code.google.com/p/google-code-prettify/">google-code-prettify</a>+<a href="http://jmblog.github.io/color-themes-for-google-code-prettify/github/">GitHub theme for google-code-prettify</a>+<a href="https://code.google.com/p/jsc3d/">JSC3D</a>+<a href="https://github.com/thegrubbsian/jquery.ganttView">jquery.ganttView</a>.
+        </p>
+    </footer>
+
+
+	<!-- Do not touch this! -->
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="media/jquery-1.9.1.min.js"></script>
+
+    <!-- Syntax Highlighter -->
+    <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js">
+    </script>
+    <!-- From https://github.com/jmblog/color-themes-for-google-code-prettify -->
+    <link href="media/github.css" type="text/css" rel="stylesheet">
+	<script type="text/javascript">
+	  !function ($) {
+		$(function(){
+		  window.prettyPrint && prettyPrint()
+		})
+	  }(window.jQuery)
+	</script>
+
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="bootstrap/js/ie10-viewport-bug-workaround.js"></script>
+
+  </body>
+</html>
