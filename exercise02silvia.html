@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <link rel="stylesheet" href="/path/to/styles/arduino-light.css">
+<script src="/path/to/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -95,69 +99,241 @@
 
   <h4><b>General info</b></h4>
   <p>
-    <img src="Images/ArduinoUNO.jpg" height="200" widht="300">
+    <img src="Images/ArduinoUNO.jpg" height="300" widht="500">
 
      It is a board based on the ATmega328P which contains everything
       needed to support the microcontroller: you simply have to connect it to a computer
       with a USB cable or power it with a AC-to-DC adapter or battery to get started.
   	</p>
     <h4 style="color:dark green;"><b>Technical Spec</b></h4>
-    <table  style="width:100%;" border="1 solid black">
-  <tr border-radius="5px" text-align="center">
-    <td>Microcontroller</td>
-    <td>ATmega328P</td>
-  </tr>
-  <tr border-radius="5px" text-align="center">
-    <td>Operating Voltage</td>
-    <td>5V</td>
-  </tr>
-  <tr border-radius="5px" text-align="center">
-      <td>Input Voltage</td>
-      <td>7-12V</td>
-  </tr>
-  <tr border-radius="5px" text-align="center">
-      <td>Digital I/O pins</td>
-      <td>14 (of which 6 provide PWM output)</td>
-  </tr>
-  <tr border-radius="5px" text-align="center">
-      <td>Analog Input Pins</td>
-      <td>6</td>
-  </tr>
-  <tr border-radius="5px" text-align="center">
-      <td>DC Current per I/O Pin</td>
-      <td>20mA</td>
-  </tr >
-  <tr border-radius="5px" text-align="center">
-      <td>DC Current for 3.3V Pin</td>
-      <td>50 mA</td>
-  </tr>
-  <tr border-radius="5px" text-align="center">
-      <td>Flash Memory</td>
-      <td>32 KB (ATmega328P)</td>
-  </tr>
-  <tr border-radius="5px" text-align="center">
-      <td>SRAM </td>
-      <td>2 KB (ATmega328P)</td>
-  </tr>
-  <tr border-radius="5px" text-align="center">
-      <td>EEPROM</td>
-      <td>1 KB (ATmega328P)</td>
-  </tr><tr border-radius="5px" text-align="center">
-      <td>Clock Speed</td>
-      <td>16 MHz</td>
-  </tr><tr border-radius="5px" text-align="center">
-      <td>Length</td>
-      <td>68.6 mm</td>
-  </tr><tr border-radius="5px" text-align="center">
-      <td>Width</td>
-      <td>53.4 mm</td>
-  </tr><tr border-radius="5px" text-align="center" >
-      <td>Weight</td>
-      <td>25 g</td>
-  </tr>
+   <style>
+	.demo {
+		border:1px solid #C0C0C0;
+		border-collapse:collapse;
+		border-spacing:2px;
+		padding:5px;
+                margin-left:32%;
 
+	}
+	.demo th {
+		border:1px solid #C0C0C0;
+		padding:5px;
+		background:#F0F0F0;
+	}
+	.demo td {
+		border:1px solid #C0C0C0;
+		text-align:center;
+		padding:5px;
+	}
+</style>
+<table class="demo">
+
+	<thead>
+	<tr>
+		<th>Characteristic</th>
+		<th>Value<br></th>
+	</tr>
+	</thead>
+	<tbody>
+	<tr>
+		<td>Microcontroller<br></td>
+		<td>ATmega328P<br></td>
+	</tr>
+	<tr>
+		<td>Operating Voltage<br></td>
+		<td>5 V <br></td>
+	</tr>
+	<tr>
+		<td>&nbsp;Input Voltage (recommended)</td>
+		<td>7-12 V <br></td>
+	</tr>
+	<tr>
+		<td>Input Voltage (limit)</td>
+		<td>&nbsp;6-20 V</td>
+	</tr>
+	<tr>
+		<td>&nbsp; Digital I/O Pins</td>
+		<td>&nbsp;14 (of which 6 provide PWM output)</td>
+	</tr>
+	<tr>
+		<td>&nbsp;PWM Digital I/O Pins</td>
+		<td>&nbsp;6</td>
+	</tr>
+	<tr>
+		<td>Analog Input Pins</td>
+		<td>&nbsp;6</td>
+	</tr>
+	<tr>
+		<td>&nbsp;DC Current per I/O Pin </td>
+		<td>&nbsp;20 mA<br></td>
+	</tr>
+	<tr>
+		<td>DC Current for 3.3V Pin</td>
+		<td>&nbsp;50 mA<br></td>
+	</tr>
+	<tr>
+		<td>Flash Memory <br></td>
+		<td>32 KB (ATmega328P)<br> of which 0.5 KB used by bootloader <br></td>
+	</tr>
+	<tr>
+		<td>&nbsp;SRAM</td>
+		<td>2 KB (ATmega328P) <br></td>
+	</tr>
+	<tr>
+		<td>EEPROM <br></td>
+		<td>1 KB (ATmega328P) <br></td>
+	</tr>
+	<tr>
+		<td>&nbsp;Clock Speed<br></td>
+		<td>&nbsp;16 MHz</td>
+	</tr>
+	<tr>
+		<td>&nbsp;Length</td>
+		<td>&nbsp;68.6 mm<br></td>
+	</tr>
+	<tr>
+		<td>&nbsp;Width</td>
+		<td>&nbsp;53.4 mm<br></td>
+	</tr>
+	<tr>
+		<td>Weight <br></td>
+		<td>25 g <br></td>
+	</tr>
+	<tbody>
 </table>
+<h4><b>Programming</b></h4>
+<p>
+  The UNO board can be programmed with <a href="https://www.arduino.cc/en/Main/Software">Arduino Software</a>.<br>
+  Once you declared your board model and programmer (remember that Arduino itself can work as an ISP)
+  in "<i>Tools</i>" button in the toolbar, you can start compiling on Arduino's IDE.
+  Thanks to an high-level language, whose functions include several bitwise operations,and to the
+  great number of libraries avalaible, programming reveals to be quite simple:
+  few simple functions synthetise pages and pages of elementary codes, leading to the same result. <br>
+  That helps when you don't have to care about what's happening at binary level and you're
+  just concerned about making your tools (pins, servo motors...) working.
+</p>
+<h4><b>Example: Blink</b></h4>
+<p>An exercise I did to get to know how to work with arduino was to reproduce
+  my MOrse-coded name with a pin lighting. <br>First of all I connected my Arduino Uno
+  to my notebook and opened Arduino Software. Then, I selected my board from the <i>Tools</i>
+  menu and its programmer (<i>AVRISP mkll</i>). I then selected and modified <i>Blink</i>
+  sketch (<i>File>Examples>Basic>Blink</i>).
+</p>
+<p>
+  This is my own final sketch.
+</p>
 
+  </p>
+  <pre>
+    <codestyle="border:1px green solid;"  scrolling="auto" frameborder="yes" align="center" height = "50%" width = "70%">
+
+ #define LED 13
+ #define LED1 11
+ #define RITARDO 1000
+ void punto(int pin){
+
+   digitalWrite(pin, HIGH);
+   delay(200);
+   digitalWrite(pin, LOW);
+   delay(200);
+
+  }
+  void spazio(int ritardo) {
+
+    delay(ritardo);
+    }
+  void linea (int pin) {
+
+    digitalWrite(pin, HIGH);
+    delay(500);
+    digitalWrite(pin, LOW);
+    delay(200);
+  }
+
+// the setup function runs once when you press reset or power the board
+void setup() {
+  // initialize digital pin 13 as an output.
+  pinMode(LED, OUTPUT);
+  pinMode(LED1, OUTPUT);
+  delay(100);
+}
+
+// the loop function runs over and over again forever
+void loop() {
+  punto(LED);
+  punto(LED);
+  punto(LED);
+
+  spazio(RITARDO);
+
+  punto(LED);
+  punto(LED);
+
+  spazio(RITARDO);
+
+  punto(LED);
+
+  linea(LED);
+
+  punto(LED);
+  punto(LED);
+
+  spazio(RITARDO);
+
+  punto(LED);
+  punto(LED);
+  punto(LED);
+  linea(LED);
+
+  spazio(RITARDO);
+
+  punto(LED);
+  punto(LED);
+
+  spazio(RITARDO);
+
+  punto(LED);
+  linea(LED);
+
+  spazio(RITARDO);
+
+  punto(LED1);
+
+  }
+</code>
+</pre>
+  <iframe src="/home/silvia/Documents/Silvia_doc/FabAcademyLight/FabAcademy_Template-master/SILVIA_morse.ino" style="border:1px green solid;" name="frame1" scrolling="auto" frameborder="yes" align="center" height = "50%" width = "70%">
+  </iframe>
+  <p>What I did, was to rearrange the default <i>Blink</i> sketch, in order to
+    produce a little more elaborated process and to write it in a simple way, so
+    as not to overturn most of the structure in case of need of a parameters change.<br>
+    First of all I defined three functions in the heading of teh sketch: <b>punto</b>,
+    <b>spazio</b> and <b>linea</b>. That helps in reducing the number of action to
+    be declared in the <i>loop</i> and by means of specific names, it's possible to have an
+    immediate idea of the action that teh process is running at that step.<br>
+    I made several attemps to find the suitable delays, since I had to differentiate
+    the space between points of the same letter(shorter delay) and between different
+    letters(longer delay). In addition, I added a second pin which has to light up once the word "S-I-L-V-I-A"
+    ends; therefore, I just had to write the basic <i>Blink</i> sketch for it, once defined the
+    pin number in the heading.
+  </p>
+<br>
+<h3><b>Great capacities into tiny dimensions: Trinket 5V</b></h3>
+<p>
+After achieving the basic skills of board programming with Arduino Uno, I focused my
+attention onto my project electronic mate: Trinket 5V. <br>
+<img src="Images/trinket5.png" style="position:center"height="200" widht="300">
+Despite its dimensions, this board is able of quite high performances, mostly thanks to
+ <i>Atmel ATtiny85</i> microcontroller, which makes it perfect if you need a
+  board that's small enough to fit into any project. <br>
+In addition, it can be programmed with Arduino IDE, after downloading the libraries needed.
+</p><p>
+  To work with Trinket 5V from Arduino's IDE it's necessary again to declare <i>Board</i>:"Adafruit Trinket 8MHz"
+  and <i>Programmer</i>:USBtinyISP from the <i>Tools</i> menu.<br>
+  I used <i>Adafruit</i>'s product to make <i><b>TURNIGY</b>TGY-2216MG</i> servomotor work.
+  To start, I looked on the net about <a href="https://www.arduino.cc/en/Reference/Servo"><i>Servo.h</i></a>.
+  This is the library Arduino uses to control servomotors and it contains specific functions
+  to mode rotation degrees, speed, repetitions.
 
 
     <!-- End of your content -->

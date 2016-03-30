@@ -8,7 +8,7 @@
     <meta name="author" content="Name Surname">
     <link rel="icon" href="media/favicon.ico">
 
-    <title>Fab Academy 2016 - Silvia Palazzi</title>
+    <title>Fab Academy 2015 - Silvia Palazzi</title>
 
     <!-- Bootstrap core CSS -->
     <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -18,7 +18,7 @@
 
     <!-- 3D files viewer -->
     <script type="text/javascript" src="media/jsc3d_ie.min.js"></script>
-	   <script type="text/javascript" src="media/jsc3d.min.js"></script>
+	<script type="text/javascript" src="media/jsc3d.min.js"></script>
     <script type="text/javascript" src="media/jsc3d.webgl.js"></script>
     <script type="text/javascript" src="media/jsc3d.touch.js"></script>
 
@@ -82,33 +82,150 @@
 
 	<!-- Insert your content here below! -->
 
-      <div  class="jumbotron">
-        <h1 style="color:green;text-align:center;">Silvia Palazzi</h1>
-<p style="font-family:verdana;">
-        <p >Hi everyone! My name is Silvia Palazzi and that's my Fab-webpage.
-      </p>
-      <p> I'm 20-year-old student and I'm studying to get my BD in Industrial Engeneering. I recently discovered the world of FabLabs and I decided to start a "light" version of FabAcademy, thanks to Fiore Basile's proposal and permission.</p>
-       <p>Despite my little abilities and knowledge, curiosity and desire to learn are pushing myself into this new experience and I really hope to be able to convert my growing knowledge in something useful and innovative.<br>Infact, I've always been concerned about environmental problems a lot and I am sure FabLabs are offering great opportunities in developing new technologies and instruments to improve our world's and nature's conditions.
-      </p>
-       <p>Therefore, I would like to share my experience and ideas by means of my webpage and I'd be very pleased about getting people's opinions, impressions and suggestions, since I firmly believe innovation and discoveries only start from knowledge and experiences sharing.</p>
-       <p>So, have a look and enjoy my work!</p>
-  </p>     <hr>
-      </div>
 
-      <div class="row">
-        <div class="col-lg-4">
-          <h2>About Me</h2>
-          <p><a class="btn btn-primary" href="about.html" role="button">View more &raquo;</a></p>
-        </div>
-        <div class="col-lg-4">
-          <h2>My lab</h2>
-          <p><a class="btn btn-primary" href="http://santachiaralab.unisi.it/" role="button">SantaChiaraLab &raquo;</a></p>
-       </div>
-        <div class="col-lg-4">
-          <h2>Final Project</h2>
-          <p><a class="btn btn-primary" href="#" role="button">View more &raquo;</a></p>
-        </div>
-      </div>
+     <h2><b>ARDUINO UNO & TRINKET </b></h1>
+
+    <h3><b>Brief meeting with Arduino Uno</b></h3>
+	<p>
+	My second task was to make a led working with my Trinket board.<br>Since my mates
+  had to do the same thing with Arduino Uno board, creating their own <a
+  href="http://fab.cba.mit.edu/content/projects/fabispkey/index.html"> Fab ISP</a>, I
+  decided to first start from <a href="https://www.arduino.cc/en/Main/ArduinoBoardUno">Arduino UNO</a>.
+</p>
+
+  <h4><b>General info</b></h4>
+  <p>
+    <img src="Images/ArduinoUNO.jpg" height="200" widht="300">
+
+     It is a board based on the ATmega328P which contains everything
+      needed to support the microcontroller: you simply have to connect it to a computer
+      with a USB cable or power it with a AC-to-DC adapter or battery to get started.
+  	</p>
+    <h4 style="color:dark green;"><b>Technical Spec</b></h4>
+   <style>
+	.demo {
+		border:1px solid #C0C0C0;
+		border-collapse:collapse;
+		border-spacing:2px;
+		padding:5px;
+margin-left:25%;
+                
+	}
+	.demo th {
+		border:1px solid #C0C0C0;
+		padding:5px;
+		background:#F0F0F0;
+	}
+	.demo td {
+		border:1px solid #C0C0C0;
+		text-align:center;
+		padding:5px;
+	}
+</style>
+<table class="demo">
+	
+	<thead>
+	<tr>
+		<th>Characteristic</th>
+		<th>Value<br></th>
+	</tr>
+	</thead>
+	<tbody>
+	<tr>
+		<td>Microcontroller<br></td>
+		<td>ATmega328P<br></td>
+	</tr>
+	<tr>
+		<td>Operating Voltage<br></td>
+		<td>5 V <br></td>
+	</tr>
+	<tr>
+		<td>&nbsp;Input Voltage (recommended)</td>
+		<td>7-12 V <br></td>
+	</tr>
+	<tr>
+		<td>Input Voltage (limit)</td>
+		<td>&nbsp;6-20 V</td>
+	</tr>
+	<tr>
+		<td>&nbsp; Digital I/O Pins</td>
+		<td>&nbsp;14 (of which 6 provide PWM output)</td>
+	</tr>
+	<tr>
+		<td>&nbsp;PWM Digital I/O Pins</td>
+		<td>&nbsp;6</td>
+	</tr>
+	<tr>
+		<td>Analog Input Pins</td>
+		<td>&nbsp;6</td>
+	</tr>
+	<tr>
+		<td>&nbsp;DC Current per I/O Pin </td>
+		<td>&nbsp;20 mA<br></td>
+	</tr>
+	<tr>
+		<td>DC Current for 3.3V Pin</td>
+		<td>&nbsp;50 mA<br></td>
+	</tr>
+	<tr>
+		<td>Flash Memory <br></td>
+		<td>32 KB (ATmega328P)<br> of which 0.5 KB used by bootloader <br></td>
+	</tr>
+	<tr>
+		<td>&nbsp;SRAM</td>
+		<td>2 KB (ATmega328P) <br></td>
+	</tr>
+	<tr>
+		<td>EEPROM <br></td>
+		<td>1 KB (ATmega328P) <br></td>
+	</tr>
+	<tr>
+		<td>&nbsp;Clock Speed<br></td>
+		<td>&nbsp;16 MHz</td>
+	</tr>
+	<tr>
+		<td>&nbsp;Length</td>
+		<td>&nbsp;68.6 mm<br></td>
+	</tr>
+	<tr>
+		<td>&nbsp;Width</td>
+		<td>&nbsp;53.4 mm<br></td>
+	</tr>
+	<tr>
+		<td>Weight <br></td>
+		<td>25 g <br></td>
+	</tr>
+	<tbody>
+</table>
+<h4><b>Programming</b></h4>
+<p>
+  The UNO board can be programmed with <a href="https://www.arduino.cc/en/Main/Software">Arduino Software</a>.<br>
+  Once you declared your board model and programmer (remember that Arduino itself can work as an ISP)
+  in "<i>Tools</i>" button in the toolbar, you can start compiling on Arduino's IDE.
+  Thanks to an high-level language, whose functions include several bitwise operations,and to the
+  great number of libraries avalaible, programming reveals to be quite simple:
+  few simple functions synthetise pages and pages of elementary codes, leading to the same result. <br>
+  That helps when you don't have to care about what's happening at binary level and you're
+  just concerned about making your tools (pins, servo motors...) working.
+</p>
+<h4><b>Example: Blink</b></h4>
+<p>
+
+
+  </p>
+
+<!-- Metti documentazione led "Silvia" morse -->
+<h3><b>Great capacities into tiny dimensions: Trinket 5V</b></h3>
+<p>
+After achieving the basic skills of board programming with Arduino Uno, I focused my
+attention onto my project electronic mate: Trinket 5V. <br>
+<img src="Images/trinket5.png" style="position:center"height="200" widht="300"">
+Despite its dimensions, this board is able of quite high performances, mostly thanks to <i>Atmel ATtiny85</i> microcontroller, which makes it the perfect board if you need a board that's small enough to fit into any project. <br>
+In addition, it can be programmed with Arduino IDE, after downloading the libraries needed.
+</p>
+
+
+
 
     <!-- End of your content -->
 
@@ -118,7 +235,7 @@
 
     <footer id="footer">
         <p id="cclicense">
-        </p>
+                </p>
         <p class="license">
         Theme: <a href="https://github.com/openp2pdesign/FabAcademy_Template">Fab Academy Template</a> by <a href="http://openp2pdesign.org">Massimo Menichinelli</a> <br>
         Based on <a href="http://getbootstrap.com/">Twitter Bootstrap</a>+<a href="http://jquery.com/">JQuery</a>+<a href="https://code.google.com/p/google-code-prettify/">google-code-prettify</a>+<a href="http://jmblog.github.io/color-themes-for-google-code-prettify/github/">GitHub theme for google-code-prettify</a>+<a href="https://code.google.com/p/jsc3d/">JSC3D</a>+<a href="https://github.com/thegrubbsian/jquery.ganttView">jquery.ganttView</a>.

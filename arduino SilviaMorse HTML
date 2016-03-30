@@ -1,0 +1,90 @@
+<pre>
+<font color="#95a5a6">/*</font>
+<font color="#95a5a6"> &nbsp;Blink</font>
+<font color="#95a5a6"> &nbsp;Turns on an LED on for one second, then off for one second, repeatedly.</font>
+<font color="#95a5a6"></font>
+<font color="#95a5a6"> &nbsp;Most Arduinos have an on-board LED you can control. On the Uno and</font>
+<font color="#95a5a6"> &nbsp;Leonardo, it is attached to digital pin 13. If you're unsure what</font>
+<font color="#95a5a6"> &nbsp;pin the on-board LED is connected to on your Arduino model, check</font>
+<font color="#95a5a6"> &nbsp;the documentation at </font><u><font color="#95a5a6">http://www.arduino.cc</font></u><font color="#95a5a6"></font>
+<font color="#95a5a6"></font>
+<font color="#95a5a6"> &nbsp;This example code is in the public domain.</font>
+<font color="#95a5a6"></font>
+<font color="#95a5a6"> &nbsp;modified 8 May 2014</font>
+<font color="#95a5a6"> &nbsp;by Scott Fitzgerald</font>
+<font color="#95a5a6"> */</font>
+ <font color="#5e6d03">#define</font> <font color="#000000">LED</font> <font color="#000000">13</font>
+ <font color="#5e6d03">#define</font> <font color="#000000">LED1</font> <font color="#000000">11</font>
+ <font color="#5e6d03">#define</font> <font color="#000000">RITARDO</font> <font color="#000000">1000</font>
+ <font color="#00979c">void</font> <font color="#000000">punto</font><font color="#000000">(</font><font color="#00979c">int</font> <font color="#000000">pin</font><font color="#000000">)</font><font color="#000000">{</font>
+ &nbsp;
+ &nbsp;&nbsp;<font color="#d35400">digitalWrite</font><font color="#000000">(</font><font color="#000000">pin</font><font color="#434f54">,</font> <font color="#00979c">HIGH</font><font color="#000000">)</font><font color="#000000">;</font>
+ &nbsp;&nbsp;<font color="#d35400">delay</font><font color="#000000">(</font><font color="#000000">200</font><font color="#000000">)</font><font color="#000000">;</font>
+ &nbsp;&nbsp;<font color="#d35400">digitalWrite</font><font color="#000000">(</font><font color="#000000">pin</font><font color="#434f54">,</font> <font color="#00979c">LOW</font><font color="#000000">)</font><font color="#000000">;</font>
+ &nbsp;&nbsp;<font color="#d35400">delay</font><font color="#000000">(</font><font color="#000000">200</font><font color="#000000">)</font><font color="#000000">;</font>
+ &nbsp;
+ &nbsp;<font color="#000000">}</font>
+ &nbsp;<font color="#00979c">void</font> <font color="#000000">spazio</font><font color="#000000">(</font><font color="#00979c">int</font> <font color="#000000">ritardo</font><font color="#000000">)</font> <font color="#000000">{</font>
+ &nbsp;&nbsp;&nbsp;
+ &nbsp;&nbsp;&nbsp;<font color="#d35400">delay</font><font color="#000000">(</font><font color="#000000">ritardo</font><font color="#000000">)</font><font color="#000000">;</font>
+ &nbsp;&nbsp;&nbsp;<font color="#000000">}</font>
+ &nbsp;<font color="#00979c">void</font> <font color="#000000">linea</font> <font color="#000000">(</font><font color="#00979c">int</font> <font color="#000000">pin</font><font color="#000000">)</font> <font color="#000000">{</font>
+
+ &nbsp;&nbsp;&nbsp;<font color="#d35400">digitalWrite</font><font color="#000000">(</font><font color="#000000">pin</font><font color="#434f54">,</font> <font color="#00979c">HIGH</font><font color="#000000">)</font><font color="#000000">;</font>
+ &nbsp;&nbsp;&nbsp;<font color="#d35400">delay</font><font color="#000000">(</font><font color="#000000">500</font><font color="#000000">)</font><font color="#000000">;</font>
+ &nbsp;&nbsp;&nbsp;<font color="#d35400">digitalWrite</font><font color="#000000">(</font><font color="#000000">pin</font><font color="#434f54">,</font> <font color="#00979c">LOW</font><font color="#000000">)</font><font color="#000000">;</font>
+ &nbsp;&nbsp;&nbsp;<font color="#d35400">delay</font><font color="#000000">(</font><font color="#000000">200</font><font color="#000000">)</font><font color="#000000">;</font>
+ &nbsp;<font color="#000000">}</font>
+
+<font color="#434f54">// the setup function runs once when you press reset or power the board</font>
+<font color="#00979c">void</font> <font color="#5e6d03">setup</font><font color="#000000">(</font><font color="#000000">)</font> <font color="#000000">{</font>
+ &nbsp;<font color="#434f54">// initialize digital pin 13 as an output.</font>
+ &nbsp;<font color="#d35400">pinMode</font><font color="#000000">(</font><font color="#000000">LED</font><font color="#434f54">,</font> <font color="#00979c">OUTPUT</font><font color="#000000">)</font><font color="#000000">;</font>
+ &nbsp;<font color="#d35400">pinMode</font><font color="#000000">(</font><font color="#000000">LED1</font><font color="#434f54">,</font> <font color="#00979c">OUTPUT</font><font color="#000000">)</font><font color="#000000">;</font>
+ &nbsp;<font color="#d35400">delay</font><font color="#000000">(</font><font color="#000000">100</font><font color="#000000">)</font><font color="#000000">;</font>
+<font color="#000000">}</font>
+
+<font color="#434f54">// the loop function runs over and over again forever</font>
+<font color="#00979c">void</font> <font color="#5e6d03">loop</font><font color="#000000">(</font><font color="#000000">)</font> <font color="#000000">{</font>
+ &nbsp;<font color="#000000">punto</font><font color="#000000">(</font><font color="#000000">LED</font><font color="#000000">)</font><font color="#000000">;</font>
+ &nbsp;<font color="#000000">punto</font><font color="#000000">(</font><font color="#000000">LED</font><font color="#000000">)</font><font color="#000000">;</font>
+ &nbsp;<font color="#000000">punto</font><font color="#000000">(</font><font color="#000000">LED</font><font color="#000000">)</font><font color="#000000">;</font>
+
+ &nbsp;<font color="#000000">spazio</font><font color="#000000">(</font><font color="#000000">RITARDO</font><font color="#000000">)</font><font color="#000000">;</font>
+
+ &nbsp;<font color="#000000">punto</font><font color="#000000">(</font><font color="#000000">LED</font><font color="#000000">)</font><font color="#000000">;</font>
+ &nbsp;<font color="#000000">punto</font><font color="#000000">(</font><font color="#000000">LED</font><font color="#000000">)</font><font color="#000000">;</font>
+ &nbsp;
+ &nbsp;<font color="#000000">spazio</font><font color="#000000">(</font><font color="#000000">RITARDO</font><font color="#000000">)</font><font color="#000000">;</font>
+
+ &nbsp;<font color="#000000">punto</font><font color="#000000">(</font><font color="#000000">LED</font><font color="#000000">)</font><font color="#000000">;</font>
+ &nbsp;
+ &nbsp;<font color="#000000">linea</font><font color="#000000">(</font><font color="#000000">LED</font><font color="#000000">)</font><font color="#000000">;</font>
+ &nbsp;
+ &nbsp;<font color="#000000">punto</font><font color="#000000">(</font><font color="#000000">LED</font><font color="#000000">)</font><font color="#000000">;</font>
+ &nbsp;<font color="#000000">punto</font><font color="#000000">(</font><font color="#000000">LED</font><font color="#000000">)</font><font color="#000000">;</font>
+ &nbsp;
+ &nbsp;<font color="#000000">spazio</font><font color="#000000">(</font><font color="#000000">RITARDO</font><font color="#000000">)</font><font color="#000000">;</font>
+ &nbsp;
+ &nbsp;<font color="#000000">punto</font><font color="#000000">(</font><font color="#000000">LED</font><font color="#000000">)</font><font color="#000000">;</font>
+ &nbsp;<font color="#000000">punto</font><font color="#000000">(</font><font color="#000000">LED</font><font color="#000000">)</font><font color="#000000">;</font>
+ &nbsp;<font color="#000000">punto</font><font color="#000000">(</font><font color="#000000">LED</font><font color="#000000">)</font><font color="#000000">;</font>
+ &nbsp;<font color="#000000">linea</font><font color="#000000">(</font><font color="#000000">LED</font><font color="#000000">)</font><font color="#000000">;</font>
+ &nbsp;
+ &nbsp;<font color="#000000">spazio</font><font color="#000000">(</font><font color="#000000">RITARDO</font><font color="#000000">)</font><font color="#000000">;</font>
+ &nbsp;
+ &nbsp;<font color="#000000">punto</font><font color="#000000">(</font><font color="#000000">LED</font><font color="#000000">)</font><font color="#000000">;</font>
+ &nbsp;<font color="#000000">punto</font><font color="#000000">(</font><font color="#000000">LED</font><font color="#000000">)</font><font color="#000000">;</font>
+ &nbsp;
+ &nbsp;<font color="#000000">spazio</font><font color="#000000">(</font><font color="#000000">RITARDO</font><font color="#000000">)</font><font color="#000000">;</font>
+ &nbsp;
+ &nbsp;<font color="#000000">punto</font><font color="#000000">(</font><font color="#000000">LED</font><font color="#000000">)</font><font color="#000000">;</font>
+ &nbsp;<font color="#000000">linea</font><font color="#000000">(</font><font color="#000000">LED</font><font color="#000000">)</font><font color="#000000">;</font>
+ &nbsp;
+ &nbsp;<font color="#000000">spazio</font><font color="#000000">(</font><font color="#000000">RITARDO</font><font color="#000000">)</font><font color="#000000">;</font>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ &nbsp;<font color="#000000">punto</font><font color="#000000">(</font><font color="#000000">LED1</font><font color="#000000">)</font><font color="#000000">;</font>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ &nbsp;<font color="#000000">}</font>
+
+</pre>
